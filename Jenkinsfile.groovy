@@ -6,7 +6,7 @@ job("My_First_DSL"){
 	   scm('* * * * *')
 	}
 	steps{
-	   maven('clean install')
+	   maven('clean install','pom.xml')
 	}
 	publishers{
 	   archiveArtifacts{
