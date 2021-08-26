@@ -1,6 +1,6 @@
 job("My_First_DSL"){
 	scm{
-	   git("https://github.com/babu11b/MyMaven.git", master)
+	   git("https://github.com/babu11b/MyMaven.git", "*/master")
 	}
 	triggers{
 	   scm('* * * * *')
