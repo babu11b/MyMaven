@@ -6,8 +6,12 @@ job("My_First_DSL"){
 	   scm('* * * * *')
 	}
 	steps{
-	   maven('clean install','pom.xml')
-	}
+	   maven{
+	     mavenInstallation('MyMaven')
+	     goals('clean')
+             goals('install')	
+	   }
+        }
 	publishers{
 	   archiveArtifacts{
 		pattern('**/*war')
